@@ -1,0 +1,17 @@
+# OS & Machine state
+.DS_Store
+Thumbs.db
+
+# IDE & Editor state
+.idea/
+.vscode/
+*.code-workspace
+.creo/
+
+# Build & Dependencies
+node_modules/
+dist/
+target/
+bin/
+*.exe
+*.log

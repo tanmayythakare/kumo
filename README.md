@@ -1,28 +1,32 @@
 <div align="center">
 
-# Kumo — Cloud Infrastructure Canvas & Bidirectional Terraform HCL Compiler
+<img src="logo.png" alt="Kumo Logo" width="160" />
 
-**Visual Cloud Architecting Engine with Real-Time HCL Generation, Cost Modeling, and Capacity Simulation**
+# Kumo — Cloud Architecture Canvas & Terraform Compiler
+
+**Visual Cloud Infrastructure Studio with Real-Time Cost Modeling, Security Linter, and Terraform HCL CodeGen**
 
 <p align="center">
-  <a href="#roadmap"><img src="https://img.shields.io/badge/Status-Active%20Development-blueviolet?style=flat-square" alt="Status: Active Development"></a>
-  <a href="https://www.terraform.io/"><img src="https://img.shields.io/badge/Terraform-HCL%20v1.9+-844FBA?style=flat-square&logo=terraform" alt="Terraform HCL"></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="https://img.shields.io/badge/Rendering-WebGL%20%2F%20WebGPU-informational?style=flat-square" alt="WebGL / WebGPU"></a>
-  <a href="https://go.dev/"><img src="https://img.shields.io/badge/Engine-Go%201.23+-00ADD8?style=flat-square&logo=go" alt="Go 1.23+"></a>
+  <a href="#engineering-roadmap"><img src="https://img.shields.io/badge/Status-Active%20Development-blueviolet?style=flat-square" alt="Status: Active Development"></a>
+  <a href="https://angular.dev/"><img src="https://img.shields.io/badge/Angular-17.3-red?style=flat-square&logo=angular" alt="Angular 17.3"></a>
+  <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Spring%20Boot-3.1.5-brightgreen?style=flat-square&logo=springboot" alt="Spring Boot 3.1.5"></a>
+  <a href="https://adoptium.net/"><img src="https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=openjdk" alt="Java 17"></a>
+  <a href="https://www.terraform.io/"><img src="https://img.shields.io/badge/Terraform-HCL-844FBA?style=flat-square&logo=terraform" alt="Terraform HCL"></a>
+  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-15-blue?style=flat-square&logo=postgresql" alt="PostgreSQL 15"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT License"></a>
 </p>
 
 <p align="center">
-  Visual cloud topology designer with bidirectional Terraform HCL compilation, sub-second cost estimation, and fault-domain simulation.<br>
-  WebGL canvas rendering · Bidirectional AST parser · AWS / GCP / Azure multi-cloud provider modeling.
+  Interactive cloud topology canvas with client-side Terraform HCL compilation, sub-second pricing estimation, and static security linting.<br>
+  Angular 17 Standalone · Spring Boot 3 · PostgreSQL 15 · Mirotone UX Design System.
 </p>
 
 <p align="center">
   <a href="#quick-flow">Quick Flow</a> •
   <a href="#system-architecture">Architecture</a> •
-  <a href="#core-architectural-pillars">Core Pillars</a> •
-  <a href="#compiler-pipeline">Compiler Pipeline</a> •
-  <a href="#planned-specification">Specification</a> •
+  <a href="#core-capabilities">Core Capabilities</a> •
+  <a href="#security-rules--quick-fix">Security Linter</a> •
+  <a href="#tech-stack">Tech Stack</a> •
   <a href="#engineering-roadmap">Roadmap</a>
 </p>
 
@@ -31,15 +35,15 @@
 ---
 
 > [!NOTE]
-> **Architecture & Engineering Blueprint**
-> Kumo is under active architectural development. This repository establishes the core system specification, bidirectional HCL compilation intermediate representation (IR), and technical roadmap.
+> **Project Status: Active Development**
+> Kumo is an active engineering project currently under development. This repository serves as the public architectural specification, design blueprint, and technical roadmap.
 
 ---
 
 ## Quick Flow
 
 ```
-Visual Canvas Drag-and-Drop  →  Graph Topology IR  →  Bidirectional HCL CodeGen  →  Live Cost & Blast Radius Audit
+Visual Topology Canvas  →  Real-Time Cost Audit  →  Static Security Linter  →  Client-Side HCL Compiler  →  Export Terraform ZIP
 ```
 
 ---
@@ -48,115 +52,112 @@ Visual Canvas Drag-and-Drop  →  Graph Topology IR  →  Bidirectional HCL Code
 
 ```mermaid
 flowchart TD
-    subgraph CanvasLayer ["Visual Interaction Tier (WebGL / WebGPU)"]
-        Canvas["Infinite Spatial Canvas<br/>Hardware-Accelerated Node Graph Rendering"]
-        Inspector["Resource Property Inspector<br/>Provider Schema Driven Validation"]
-        MiniMap["Viewport Navigator & Dependency MiniMap"]
-        Canvas --> Inspector
-        Canvas --> MiniMap
+    subgraph PresentationTier ["Client Presentation Tier (Angular 17 Standalone SPA)"]
+        Canvas["Canvas Viewport & Grid<br/>Interactive Node Graph, Minimap & Geometry Routing"]
+        Palette["Palette Sidebar<br/>AWS Primitives (VPC, EC2, RDS, S3, ALB, NAT)"]
+        Inspector["Inspector Panel & Quick Actions<br/>Resource Configuration & Security QuickFix"]
+        Drawer["Terraform Drawer<br/>Real-Time Syntax-Highlighted HCL Code Preview"]
     end
 
-    subgraph CompilerLayer ["Bidirectional Compilation Core (Go / WASM Engine)"]
-        Parser["HCL v2 Lexer & AST Parser<br/>Bidirectional HCL <--> Graph IR"]
-        GraphIR["Directed Acyclic Graph IR<br/>Node: Resources / Edges: References"]
-        CodeGen["Deterministic HCL Code Generator<br/>Formatted main.tf, variables.tf, outputs.tf"]
-        Parser --> GraphIR
-        GraphIR --> CodeGen
+    subgraph ClientIntelligence ["Client-Side Intelligence Engines"]
+        HCLGen["TerraformGeneratorService<br/>Client-Side AST Compiler (main.tf & variables.tf)"]
+        CostEst["CostEstimatorService<br/>Real-Time Hourly, Monthly ($730h) & Annual Pricing"]
+        SecLint["SecurityLinterService<br/>SEC-001, SEC-002, SEC-003 Automated Rule Audit"]
+        AIAssist["AI Architecture Assistant<br/>Topology Optimization & Capacity Advice"]
     end
 
-    subgraph AnalyticalEngines ["Real-Time Intelligence Engines"]
-        CostEngine["Infracost Real-Time Pricing Engine<br/>Sub-Second Monthly Cloud Bill Estimation"]
-        SecurityEngine["Blast-Radius & Least-Privilege Sentinel<br/>IAM Graph Traversals & Security Group Overlap"]
-        FaultSim["AZ / Region Failure Simulator<br/>High-Availability Boundary Analysis"]
+    subgraph BackendGateway ["Application Backend (Spring Boot 3.1.5 REST API)"]
+        Sec["Spring Security 6<br/>Stateless JWT & OAuth2 GitHub/Google SSO"]
+        RateLimit["Bucket4j Rate Limiter<br/>Token Bucket Request Throttling"]
+        ProjectCtrl["Project Controller (/api/v1/projects)<br/>Topology Persistence & Workspace Management"]
     end
 
-    subgraph OutputArtifacts ["Infrastructure Artifacts"]
-        TFModule["Deployable Terraform Module<br/>100% Native HashiCorp HCL"]
-        ArchDiagram["Exportable Vector Architecture SVG / PNG"]
+    subgraph PersistenceTier ["Persistence Layer (PostgreSQL 15)"]
+        DB[("PostgreSQL 15 Database (:5432)<br/>Flyway Migration Engine / Database: kumo_db")]
     end
 
-    Canvas <-->|"Bidirectional State Sync"| GraphIR
-    GraphIR --> CostEngine
-    GraphIR --> SecurityEngine
-    GraphIR --> FaultSim
-    CodeGen --> TFModule
-    Canvas --> ArchDiagram
+    Palette --> Canvas
+    Canvas --> Inspector
+    Canvas --> Drawer
+    Canvas --> HCLGen
+    Canvas --> CostEst
+    Canvas --> SecLint
+    Canvas --> AIAssist
+    Inspector -->|"1-Click QuickFix"| SecLint
+    Canvas -->|"REST API / Bearer Token"| ProjectCtrl
+    ProjectCtrl --> Sec
+    Sec --> RateLimit
+    ProjectCtrl --> DB
 ```
 
 ---
 
-## Core Architectural Pillars
+## Core Capabilities
 
-### 01. GPU-Accelerated Infinite Topology Canvas
-* **High-Density Node Rendering**: Powered by WebGL/WebGPU to smoothly render hundreds of cloud resources, VPC subnets, security group linkages, and peering connections at continuous 60fps.
-* **Spatial Semantic Zoom**: Transitions dynamically from high-level multi-region VPC topologies down to individual EC2, Lambda, and IAM policy attribute definitions.
+### 01. Interactive Visual Topology Canvas & Connection Geometry
+* **Containment & Hierarchy**: Native support for parent-child network topologies (VPC subnets containing EC2 and RDS instances) with automatic containment detection and bounding recalculations.
+* **Orthogonal Path Routing**: Dynamic connection geometry calculates obstacle-aware routing vectors between nodes with interactive connection handles and directional data flows.
+* **Spatial Navigation**: Infinite grid panning, hardware-accelerated zoom, spatial search, and minimap viewport tracking.
 
-### 02. Bidirectional HCL AST Parser & Compiler
-* **True Two-Way Synchronization**: Edits made on the visual canvas automatically produce clean, idiomatic Terraform HCL. Conversely, pasting existing `.tf` files generates the visual topology layout instantaneously.
-* **Lossless Round-Tripping**: Preserves custom comments, local variables, and variable interpolation syntax across round-trip edits without stripping developer formatting.
+### 02. Client-Side Terraform HCL Compiler & Project Export
+* **Zero-Latency In-Browser Compilation**: Translates the visual node-and-edge graph directly into idiomatic HashiCorp HCL (`main.tf`, `variables.tf`, `outputs.tf`) on the client side without backend round-trip latency.
+* **Deterministic Resource Declarations**: Generates production-ready Terraform blocks complete with CIDR blocks, security group ingress/egress rules, subnet associations, and resource tags.
+* **1-Click Project Export**: Packages generated Terraform modules into downloadable project archives ready for immediate `terraform init` and `terraform apply`.
 
-### 03. Sub-Second Real-Time Cost Estimation Engine
-* **Instantaneous Financial Telemetry**: Queries pricing heuristics in real-time as resources and instances are provisioned on canvas (e.g. EC2 instance family switches, RDS multi-AZ deployments, NAT Gateway traffic estimates).
-* **Budget Threshold Guardrails**: Highlights cost deltas dynamically before infrastructure changes are exported to Git or CI/CD pipelines.
+### 03. Real-Time Cost Estimation & Pricing Heuristics
+* **Continuous Cost Auditing**: Calculates instantaneous cost deltas as resources are dropped or reconfigured on canvas (EC2 instance types, RDS engines, multi-AZ toggles, S3 storage classes, NAT Gateways).
+* **Transparent Budget Projections**: Provides transparent cost breakdowns at hourly, monthly (730 running hours), and annual intervals.
 
-### 04. Blast-Radius Analysis & Security Sentinel
-* **IAM Least-Privilege Graph Traversals**: Automatically maps permissions, role assumptions, and public egress paths across cloud resources.
-* **Fault-Domain Resilience Auditing**: Simulates single Availability Zone or Regional outages by severing nodes, demonstrating service continuity and failover readiness visually.
-
----
-
-## Compiler Pipeline
-
-```
-┌─────────────────────────┐
-│ Visual Topology Graph   │
-│ (Nodes, Subnets, Edges) │
-└────────────┬────────────┘
-             │ State Dispatch
-             ▼
-┌─────────────────────────┐
-│ Intermediate Rep (IR)   │ ◄──── Bidirectional Bridge ────► ┌─────────────────────────┐
-│ (Dependency DAG)        │                                   │ Native Terraform HCL    │
-└────────────┬────────────┘                                   │ (main.tf / provider.tf) │
-             │ Compilation                                    └─────────────────────────┘
-             ▼
-┌─────────────────────────┐
-│ Static Analysis Audit   │
-│ • Cost Delta (Infracost)│
-│ • IAM Blast Radius      │
-│ • Trivy Policy Sentinel │
-└────────────┬────────────┘
-             │ Emit
-             ▼
-┌─────────────────────────┐
-│ Production TF Artifacts │
-└─────────────────────────┘
-```
+### 04. Automated Security Linter with 1-Click Quick Fix
+* **Well-Architected Guardrails**: Continuously checks topology design against cloud security best practices and least-privilege networking.
+* **One-Click Remediation**: Detects misconfigurations and provides instant "Quick Fix" actions that update the canvas topology and generated Terraform code simultaneously.
 
 ---
 
-## Planned Specification
+## Security Rules & Quick Fix
 
-### Provider Support Target
-* **Amazon Web Services (AWS)**: VPC, Subnet, Route Table, IGW, EC2, ECS, EKS, RDS, S3, IAM, CloudFront, Lambda.
-* **Google Cloud Platform (GCP)**: VPC Network, Compute Engine, Cloud SQL, Cloud Storage, GKE, Cloud Run.
-* **Microsoft Azure**: VNet, Subnets, Virtual Machines, Azure SQL, Blob Storage, AKS.
+| Rule ID | Severity | Violation Condition | Automated 1-Click Quick Fix |
+| :--- | :--- | :--- | :--- |
+| **SEC-001** | High | S3 bucket provisioned without server-side encryption | Automatically injects `aws_s3_bucket_server_side_encryption_configuration` with AES256 |
+| **SEC-002** | Critical | Security group with open ingress (`0.0.0.0/0`) on administration ports (22 SSH / 3389 RDP) | Restricts CIDR to current administrator IP or removes public ingress rule |
+| **SEC-003** | Critical | Database instance (RDS) placed in public subnet or configured with public accessibility | Moves instance to private data subnet and strips public IP allocation |
 
-### Target Performance Benchmarks
-* **AST Parse Latency**: `< 50ms` for typical configurations under 1,000 resources.
-* **Canvas Frame Budget**: Fixed `16.6ms` (60fps) during active pan, zoom, and multi-node drag interactions.
-* **Cost Query Cache**: Sub-10ms lookup against cached local provider pricing matrices.
+---
+
+## Tech Stack
+
+### Frontend & Visual Engine
+| Layer | Technology | Version | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Framework** | Angular | 17.3 | Standalone component Single-Page Application |
+| **Animation** | GSAP | 3.15.0 | Canvas physics, smooth transitions, and drawer reveals |
+| **Icons** | Lucide Angular | 1.0.0 | Clean vector iconography across panels and catalog |
+| **Language** | TypeScript | 5.4.2 | Strongly-typed domain models and AST transformations |
+| **Reactive Core** | RxJS | 7.8.0 | State streams, debounced updates, and event bus |
+| **Design System** | Mirotone UX | — | Glassmorphic floating panels, Google Outfit typography |
+
+### Backend API & Infrastructure
+| Layer | Technology | Version | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Language** | Java | 17 LTS | Enterprise backend runtime |
+| **Framework** | Spring Boot | 3.1.5 | RESTful microservice API |
+| **Security** | Spring Security | 6.x | Stateless JWT authentication & OAuth2 SSO |
+| **Rate Limiting** | Bucket4j | 8.3.0 | Token bucket rate limiting per IP / API token |
+| **Database** | PostgreSQL | 15 | Primary relational datastore for project workspaces |
+| **Migrations** | Flyway | 10.7.1 | Version-controlled relational database schema evolutions |
+| **Containers** | Docker Compose | — | Multi-container development and staging orchestration |
 
 ---
 
 ## Engineering Roadmap
 
-- [x] **Milestone 1**: Core system architecture, HCL bidirectional AST intermediate representation (IR) specification.
-- [ ] **Milestone 2**: Standalone Go-based HCL lexer and AST round-trip serializer (`kumo-core`).
-- [ ] **Milestone 3**: WebGL visual node graph canvas with reactive state synchronization.
-- [ ] **Milestone 4**: AWS Provider schema generator and component palette.
-- [ ] **Milestone 5**: Real-time Infracost pricing integration and visual blast-radius security overlay.
-- [ ] **Milestone 6**: Local CLI compilation binary and browser-based WebAssembly (WASM) distribution.
+- [x] **Phase 1: Canvas Core**: Infinite grid, drag-and-drop node catalog, containment service, and connection geometry.
+- [x] **Phase 2: Compiler Engine**: Client-side Terraform HCL AST generator (`TerraformGeneratorService`) and ZIP packager.
+- [x] **Phase 3: Financial Intelligence**: Real-time AWS pricing estimation engine (`CostEstimatorService`) across EC2, RDS, S3, ALB, and NAT.
+- [x] **Phase 4: Security Linter**: Static vulnerability scanner (`SecurityLinterService`) with 1-click Quick Fix remediation (`SEC-001`, `SEC-002`, `SEC-003`).
+- [x] **Phase 5: Enterprise Backend**: Spring Boot 3.1 REST API, JWT auth, Bucket4j rate limiting, and PostgreSQL persistence.
+- [ ] **Phase 6: Multi-Cloud Providers**: Extending component catalog and HCL generator to Google Cloud Platform (GCP) and Microsoft Azure.
+- [ ] **Phase 7: Live State Synchronization**: Bi-directional reconciliation with live `terraform.tfstate` files and AWS CloudFormation templates.
 
 ---
 

@@ -1,0 +1,31 @@
+<svg viewBox="0 40 200 130" xmlns="http://www.w3.org/2000/svg" width="200" height="130">
+  <style>
+    .kumo-trace {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: kumoTraceLoop 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes kumoTraceLoop {
+      0% {
+        stroke-dashoffset: 400;
+      }
+      50% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -400;
+      }
+    }
+  </style>
+  <path class="kumo-trace"
+        d="M 71.21 141.21
+           A 30 30 0 1 1 68.00 96.00
+           L 132.00 144.00
+           A 30 30 0 1 0 135.00 94.00
+           A 35 35 0 0 0 75.35 69.25"
+        fill="none"
+        stroke="#38bdf8"
+        stroke-width="16"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+</svg>

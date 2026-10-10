@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo.png" alt="Kumo Logo" width="160" />
+<img src="logo.svg" alt="Kumo Logo" width="160" />
 
 # Kumo — Cloud Architecture Canvas & Terraform Compiler
 
